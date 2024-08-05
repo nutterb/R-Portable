@@ -10,7 +10,7 @@
 validateVersionNumber <- function(version){
   version <- trimws(version)
   
-  if any((!grepl("^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$", version))){
+  if (any((!grepl("^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$", version)))){
     stop("Version number must be in x.y.z format")
   }
   
